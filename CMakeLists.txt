@@ -11,7 +11,7 @@ set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 
-add_executable(test tests/test.cpp src/insertSort.cpp src/mergeSort.cpp src/quickSort.cpp src radixSort.cpp)
+add_executable(test tests/test.cpp src/sort.cpp)
 target_include_directories(test PUBLIC ${PROJECT_SOURCE_DIR}/include)
 
 # add the executable

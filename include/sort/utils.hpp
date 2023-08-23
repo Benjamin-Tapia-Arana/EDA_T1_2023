@@ -2,6 +2,7 @@
 #define SORT_UTILS_HPP
 
 namespace sort{
+	
 	float* createArray(int n);
 	float* createRandomArray(int n);
 	float* createRandomIntArray(int n, int minVal = 0, int maxVal = 100);

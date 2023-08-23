@@ -1,14 +1,15 @@
 #ifndef SORT_SORT_HPP
 #define SORT_SORT_HPP
 
-namespace sort {
-	void selectionSort(float* A, int n);
+namespace sort{
+
 	int split_qs(float* A, int i, int j);
+	void insertSort();
 	void quickSort(float* A, int i, int j);
 	void quickSort(float* A, int n);
-	int  k_smallest(float* A, int i, int j, int k);
-	int  k_smallest(float* A, int n, int k);
-
+	void merge();
+	void mergeSort();
+	void radixSort();
 }
 
 #endif
