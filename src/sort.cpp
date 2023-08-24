@@ -37,7 +37,7 @@ namespace sort{
 		int p1, p2 = i;
 		int p2 = k + 1;
 		int q = 0;
-		while (p1 <= k && p2 <= j){
+		while (p1 <= k && p2 <= j) {
 			if (A[p1] <= A[p2]) {
 				Aux[q] = A[p1];;
 				p1++;
@@ -71,8 +71,9 @@ namespace sort{
 
 
 	// RADIXSORT
-	void radixSort(){
-
+	void radixSort(float* A, int i) {
+		int bucket[10];
+		
 	}
 
 }
