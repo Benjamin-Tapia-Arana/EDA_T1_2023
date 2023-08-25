@@ -8,31 +8,31 @@
 
 namespace sort{
 
-	float* createArray(int n){
-		return new float[n];
+	int* createArray(int n){
+		return new int[n];
 	}
 
-	float* createRandomArray(int n){
-		float* A = createArray(n);
+	int* createRandomArray(int n){
+		int* A = createArray(n);
 		for (int i = 0; i < n; i++){
 			A[i] =  std::rand() / static_cast<float>(RAND_MAX);
 		}
 		return A;
 	}
 
-	float* createRandomIntArray(int n, int minVal, int maxVal){
-		float* A = createArray(n);
+	int* createRandomIntArray(int n, int minVal, int maxVal){
+		int* A = createArray(n);
 		for (int i = 0; i < n; i++){
 			A[i] = getRandomInt(minVal, maxVal);
 		}
 		return A;
 	}
 
-	void deleteArray(float* A){
+	void deleteArray(int* A){
 		delete[] A;
 	}
 
-	void printArray(float* A, int n){
+	void printArray(int* A, int n){
 		for (int i = 0; i < n; i++){
 			std::cout<<A[i]<<" ";
 		}
@@ -45,8 +45,8 @@ namespace sort{
 		}
 	}
 
-	void swap(float* A, int i, int j){
-		float aux = A[i];
+	void swap(int* A, int i, int j){
+		int aux = A[i];
 		A[i] = A[j];
 		A[j] = aux;
 	}
@@ -63,5 +63,23 @@ namespace sort{
 			V[i - 1] = part_size * i;
 		}
 		return V;
+	}
+	
+	int maxLengthNumber(int* A, int n) {
+		int largestN = 0;
+		for (int i = 0; i < n; i++) {if (A[i] > largestN) {largestN = A[i];}}
+		return largestN;
+	}
+
+	int maxLength(int* A, int n) {
+		int largestN = 0;
+		int len = 0;
+		for (int i = 0; i < n; i++) {if (A[i] > largestN) {largestN = A[i];}}
+		while (largestN > 0) {
+			largestN /= 10;
+			len++;
+		}
+		
+		return len + 1;
 	}
 }
