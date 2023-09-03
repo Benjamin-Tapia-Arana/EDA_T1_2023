@@ -12,7 +12,7 @@ namespace sort{
 	void merge(int* A, int i, int j, int k);
 	void mergeSort(int* A, int i, int j);
 	void ordering(int* A, int i, int pos, int *bucket);
-	void radixSort(int* A, int i, int pos = 10, int* bucket = nullptr);
+	void radixSort(int* A, int i, int pos = 5, int* bucket = nullptr);
 }
 
 #endif

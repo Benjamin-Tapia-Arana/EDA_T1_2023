@@ -42,11 +42,23 @@ int main(int nargs, char** args){
 
 	std::srand(std::time(nullptr));
 	int n = 10;
-	int* A = sort::createRandomIntArray(n, 0, 100);
+	int* A = sort::createRandomIntArray(n, 0, 1000);
+	int C1[10];
+	int C2[10];
+	int C3[10];
+	int C4[10];
+	std::copy(A, A + n, C1);
+	std::copy(A, A + n, C2);
+	std::copy(A, A + n, C3);
+	std::copy(A, A + n, C4);
 	sort::printArray(A, n);
 //	auto start = std::chrono::high_resolution_clock::now();
-	sort::radixSort(A, n);
-	sort::printArray(A, n);
+	sort::quickSort(C1, 0, n - 1);
+	sort::printArray(C1, n);
+	sort::mergeSort(C2, 0, n - 1);
+	sort::printArray(C2, n);
+	sort::radixSort(C3, n);
+	sort::printArray(C3, n);
 //	sort::deleteArray(A);
 //	auto end = std::chrono::high_resolution_clock::now();
 //	std::cout<<" Elapsed : " << getElapsedTime(start, end) << std::endl;

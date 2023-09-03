@@ -92,6 +92,7 @@ namespace sort{
 		if (pos == 5) {pos = pow(10, maxLength(A, i));}
 		if (bucket == nullptr) {bucket = new int[10];}
 		if (pos > 0) {
+			bucket = new int[10];
 			radixSort(A, i, pos / 10, bucket);
 			ordering(A, i, pos, bucket);
 		}
