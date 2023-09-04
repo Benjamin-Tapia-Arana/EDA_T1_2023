@@ -11,7 +11,6 @@ namespace sort{
 
 	}
 
-
 	// QUICKSORT (código del profesor)
 	int split_qs(int* A, int i, int j) {
 		int p = getRandomInt(i, j);
@@ -32,7 +31,6 @@ namespace sort{
 		}
 	}
 	void quickSort(int* A, int n) {quickSort(A, 0, n - 1);}
-
 
 	// MERGESORT (codigo basado en el pseudo-código del libro guía del curso)
 	void merge(int* A, int i, int j, int k) {
@@ -72,7 +70,6 @@ namespace sort{
 		}
 	}
 
-
 	// RADIXSORT
 	void ordering(int* A, int i, int pos, int* bucket) {
 		int* Aux = new int[i];
@@ -92,7 +89,6 @@ namespace sort{
 		if (pos == 5) {pos = pow(10, maxLength(A, i));}
 		if (bucket == nullptr) {bucket = new int[10];}
 		if (pos > 0) {
-			bucket = new int[10];
 			radixSort(A, i, pos / 10, bucket);
 			ordering(A, i, pos, bucket);
 		}
