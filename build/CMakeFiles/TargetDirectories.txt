@@ -1,0 +1,3 @@
+/home/edauandes/EDA_T1_2023/build/CMakeFiles/sort_ruts.dir
+/home/edauandes/EDA_T1_2023/build/CMakeFiles/edit_cache.dir
+/home/edauandes/EDA_T1_2023/build/CMakeFiles/rebuild_cache.dir

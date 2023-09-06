@@ -1,0 +1,1 @@
+/usr/bin/g++ CMakeFiles/sort_ruts.dir/main/sort_ruts.cpp.o CMakeFiles/sort_ruts.dir/src/sort.cpp.o CMakeFiles/sort_ruts.dir/src/utils.cpp.o -o sort_ruts 
